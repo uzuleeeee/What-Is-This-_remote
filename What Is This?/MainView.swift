@@ -11,7 +11,7 @@ import Vision
 
 struct MainView: View {
     var body: some View {
-        Text("")
+        CameraView()
     }
 }
 
