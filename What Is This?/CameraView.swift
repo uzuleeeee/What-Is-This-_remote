@@ -13,13 +13,10 @@ import AVKit
 
 struct CameraView: View {
     @ObservedObject var cameraViewModel = CameraViewModel()
-
     var body: some View {
         ZStack {
             CameraPreview(camera: cameraViewModel)
                 .edgesIgnoringSafeArea(.all)
-
-            // Add object detection overlay here (optional)
         }
         .onAppear {
             cameraViewModel.startSession()

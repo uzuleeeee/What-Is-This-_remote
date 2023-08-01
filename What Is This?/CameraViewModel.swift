@@ -14,7 +14,7 @@ class CameraViewModel: NSObject, ObservableObject {
     var captureSession = AVCaptureSession()
     var requests = [VNRequest]()
     let resnetModel = Resnet50()
-
+    
     func startSession() {
         guard let device = AVCaptureDevice.default(for: .video),
               let input = try? AVCaptureDeviceInput(device: device) else {
