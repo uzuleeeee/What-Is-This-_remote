@@ -46,7 +46,6 @@
 		4AAE37CB2A78A12D005DBA47 = {
 			isa = PBXGroup;
 			children = (
-				4A10F8A52A7943D0006850D7 /* DetectedObject.swift */,
 				4AAE37D62A78A12D005DBA47 /* What Is This? */,
 				4AAE37D52A78A12D005DBA47 /* Products */,
 			);
@@ -64,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				4A45D40D2A78BDC0002EB7AB /* What-Is-This--Info.plist */,
+				4A10F8A52A7943D0006850D7 /* DetectedObject.swift */,
 				4AAE37D72A78A12D005DBA47 /* What_Is_This_App.swift */,
 				4AAE37D92A78A12D005DBA47 /* MainView.swift */,
 				4AAE37E52A78A21C005DBA47 /* CameraView.swift */,
