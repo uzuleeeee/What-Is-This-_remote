@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A45D40D2A78BDC0002EB7AB /* What-Is-This--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "What-Is-This--Info.plist"; sourceTree = SOURCE_ROOT; };
 		4AAE37D42A78A12D005DBA47 /* What Is This?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What Is This?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAE37D72A78A12D005DBA47 /* What_Is_This_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_Is_This_App.swift; sourceTree = "<group>"; };
 		4AAE37D92A78A12D005DBA47 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		4AAE37D62A78A12D005DBA47 /* What Is This? */ = {
 			isa = PBXGroup;
 			children = (
+				4A45D40D2A78BDC0002EB7AB /* What-Is-This--Info.plist */,
 				4AAE37D72A78A12D005DBA47 /* What_Is_This_App.swift */,
 				4AAE37D92A78A12D005DBA47 /* MainView.swift */,
 				4AAE37E52A78A21C005DBA47 /* SecondPage.swift */,
@@ -274,6 +276,8 @@
 				DEVELOPMENT_TEAM = 2BS6P7FL7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "What-Is-This--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access to Camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +307,8 @@
 				DEVELOPMENT_TEAM = 2BS6P7FL7Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "What-Is-This--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access to Camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
