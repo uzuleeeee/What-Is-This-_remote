@@ -7,11 +7,11 @@
 
 import SwiftUI
 import AVFoundation
-import Vision
 
 struct MainView: View {
     var body: some View {
         CameraView()
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
