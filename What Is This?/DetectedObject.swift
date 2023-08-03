@@ -20,12 +20,4 @@ struct DetectedObject: Equatable {
         let confidencePercentage = confidence * 100
         return String(format: "%0.0f", confidencePercentage) + "%"
     }
-    
-    /*
-    var displayText: String {
-        let confidencePercentage = confidence * 100
-        let roundedConfidencePercentage = String(format: "%0.0f", confidencePercentage)
-        return "I am \(roundedConfidencePercentage)% sure this is a \(objectName)"
-    }
-    */
 }

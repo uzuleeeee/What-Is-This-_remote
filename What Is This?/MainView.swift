@@ -24,12 +24,7 @@ struct MainView: View {
                 Button ("What is this?") {
                     isShowingObjectTextView.toggle()
                 }
-                .bold()
-                .font(.title)
-                .padding()
-                .background(.blue)
-                .foregroundColor(.white)
-                .cornerRadius(25)
+                .blueRoundedButtonStyle()
                 .sheet(isPresented: $isShowingObjectTextView) {
                     ObjectTextView(object: cameraViewModel.currentObject)
                         .presentationDetents([.fraction(0.3), .fraction(1)])

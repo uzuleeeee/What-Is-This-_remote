@@ -17,7 +17,7 @@ struct CameraView: View {
     var body: some View {
         CameraPreview(camera: cameraViewModel)
             .ignoresSafeArea()
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .cornerRadius(25)
             .onAppear {
                 cameraViewModel.startSession()
             }
