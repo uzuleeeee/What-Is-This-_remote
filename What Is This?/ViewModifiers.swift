@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+struct BlueRoundedButtonStyle: ButtonStyle {
+    var isDisabled = false
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .fontWeight(isDisabled ? .regular : .bold)
+            .font(isDisabled ? .title2 : .title)
+            .padding()
+            .background(isDisabled ? .gray : .blue)
+            .foregroundColor(.white)
+            .cornerRadius(25)
+    }
+}
+
 struct BlueRoundedButton: ViewModifier {
     func body(content: Content) -> some View {
         content

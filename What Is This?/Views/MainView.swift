@@ -23,12 +23,23 @@ struct MainView: View {
                 
                 Button ("What is this?") {
                     isShowingObjectTextView.toggle()
+                    if (isShowingObjectTextView) {
+                        cameraViewModel.stopSession()
+                    }
                 }
-                .blueRoundedButtonStyle()
+                .disabled(cameraViewModel.isBelowThreshold)
+                .buttonStyle(BlueRoundedButtonStyle(isDisabled: false))
                 .sheet(isPresented: $isShowingObjectTextView) {
                     ObjectTextView(object: cameraViewModel.currentObject)
                         .presentationDetents([.fraction(0.3), .fraction(1)])
                         .presentationDragIndicator(.visible)
+                }
+                .onChange(of: isShowingObjectTextView) { state in
+                    print(state)
+                    if (state == false) {
+                        print("State is false, start session")
+                        cameraViewModel.resumeSession()
+                    }
                 }
             }
         }
