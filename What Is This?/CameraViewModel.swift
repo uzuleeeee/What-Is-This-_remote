@@ -15,6 +15,8 @@ class CameraViewModel: NSObject, ObservableObject {
     var requests = [VNRequest]()
     let resnetModel = Resnet50()
     
+    @Published var currentObject = DetectedObject(objectName: "Default", confidence: 0.0)
+    
     func startSession() {
         guard let device = AVCaptureDevice.default(for: .video),
               let input = try? AVCaptureDeviceInput(device: device) else {
@@ -50,6 +52,8 @@ class CameraViewModel: NSObject, ObservableObject {
                let topResult = results.first {
                 // Process the object detection results here
                 print(topResult.identifier, topResult.confidence)
+                let newObject = DetectedObject(objectName: topResult.identifier, confidence: topResult.confidence)
+                self.currentObject = newObject
             }
         }
 

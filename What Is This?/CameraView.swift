@@ -17,6 +17,13 @@ struct CameraView: View {
         ZStack {
             CameraPreview(camera: cameraViewModel)
                 .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Spacer()
+                Text(cameraViewModel.currentObject.displayText)
+                    .padding()
+                    .font(.largeTitle)
+            }
         }
         .onAppear {
             cameraViewModel.startSession()
