@@ -47,6 +47,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A3949DD2A7BA34400752C49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AAE37D92A78A12D005DBA47 /* MainView.swift */,
+				4AAE37E52A78A21C005DBA47 /* CameraView.swift */,
+				4A10F89F2A793BA5006850D7 /* CameraPreview.swift */,
+				4A30E0922A7B43330053B597 /* ObjectTextView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A3949DE2A7BA35D00752C49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A10F8A12A793BBC006850D7 /* CameraViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A3949DF2A7BA37300752C49 /* Data Types */ = {
+			isa = PBXGroup;
+			children = (
+				4A10F8A52A7943D0006850D7 /* DetectedObject.swift */,
+			);
+			path = "Data Types";
+			sourceTree = "<group>";
+		};
 		4AAE37CB2A78A12D005DBA47 = {
 			isa = PBXGroup;
 			children = (
@@ -67,13 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				4A45D40D2A78BDC0002EB7AB /* What-Is-This--Info.plist */,
-				4A10F8A52A7943D0006850D7 /* DetectedObject.swift */,
 				4AAE37D72A78A12D005DBA47 /* What_Is_This_App.swift */,
-				4AAE37D92A78A12D005DBA47 /* MainView.swift */,
-				4A30E0922A7B43330053B597 /* ObjectTextView.swift */,
-				4AAE37E52A78A21C005DBA47 /* CameraView.swift */,
-				4A10F89F2A793BA5006850D7 /* CameraPreview.swift */,
-				4A10F8A12A793BBC006850D7 /* CameraViewModel.swift */,
+				4A3949DD2A7BA34400752C49 /* Views */,
+				4A3949DE2A7BA35D00752C49 /* Models */,
+				4A3949DF2A7BA37300752C49 /* Data Types */,
 				4A3949DB2A7BA15C00752C49 /* ViewModifiers.swift */,
 				4A10F8A32A793C36006850D7 /* Resnet50.mlmodel */,
 				4AAE37DB2A78A12E005DBA47 /* Assets.xcassets */,
