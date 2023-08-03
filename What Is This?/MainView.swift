@@ -9,9 +9,34 @@ import SwiftUI
 import AVFoundation
 
 struct MainView: View {
+    @StateObject var cameraViewModel = CameraViewModel()
+    
+    @State private var isShowingObjectTextView = false
+    
     var body: some View {
-        CameraView()
-            .edgesIgnoringSafeArea(.all)
+        ZStack {
+            CameraView(cameraViewModel: cameraViewModel)
+                .edgesIgnoringSafeArea(.bottom)
+            
+            VStack {
+                Spacer()
+                
+                Button ("What is this?") {
+                    isShowingObjectTextView.toggle()
+                }
+                .bold()
+                .font(.title)
+                .padding()
+                .background(.blue)
+                .foregroundColor(.white)
+                .cornerRadius(25)
+                .sheet(isPresented: $isShowingObjectTextView) {
+                    ObjectTextView(object: cameraViewModel.currentObject)
+                        .presentationDetents([.fraction(0.3), .fraction(1)])
+                        .presentationDragIndicator(.visible)
+                }
+            }
+        }
     }
 }
 

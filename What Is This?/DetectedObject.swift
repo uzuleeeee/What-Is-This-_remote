@@ -11,9 +11,21 @@ struct DetectedObject: Equatable {
     let objectName: String
     let confidence: Float
     
+    var firstObjectName: String {
+        let objectNameArray = objectName.components(separatedBy:", ")
+        return objectNameArray.first ?? objectName
+    }
+    
+    var roundedConfidencePercentage: String {
+        let confidencePercentage = confidence * 100
+        return String(format: "%0.0f", confidencePercentage) + "%"
+    }
+    
+    /*
     var displayText: String {
         let confidencePercentage = confidence * 100
         let roundedConfidencePercentage = String(format: "%0.0f", confidencePercentage)
         return "I am \(roundedConfidencePercentage)% sure this is a \(objectName)"
     }
+    */
 }

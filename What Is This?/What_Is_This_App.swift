@@ -12,6 +12,7 @@ struct What_Is_This_App: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .persistentSystemOverlays(.hidden)
         }
     }
 }

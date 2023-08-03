@@ -12,30 +12,23 @@ import SwiftUI
 import AVKit
 
 struct CameraView: View {
-    @ObservedObject var cameraViewModel = CameraViewModel()
+    @ObservedObject var cameraViewModel : CameraViewModel
+    
     var body: some View {
-        ZStack {
-            CameraPreview(camera: cameraViewModel)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Spacer()
-                Text(cameraViewModel.currentObject.displayText)
-                    .padding()
-                    .font(.largeTitle)
+        CameraPreview(camera: cameraViewModel)
+            .ignoresSafeArea()
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .onAppear {
+                cameraViewModel.startSession()
             }
-        }
-        .onAppear {
-            cameraViewModel.startSession()
-        }
-        .onDisappear {
-            cameraViewModel.stopSession()
-        }
+            .onDisappear {
+                cameraViewModel.stopSession()
+            }
     }
 }
 
 struct CameraView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraView()
+        CameraView(cameraViewModel: CameraViewModel())
     }
 }
