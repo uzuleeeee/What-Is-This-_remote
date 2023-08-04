@@ -28,7 +28,7 @@ struct MainView: View {
                     }
                 }
                 .disabled(cameraViewModel.isBelowThreshold)
-                .buttonStyle(BlueRoundedButtonStyle(isDisabled: false))
+                .buttonStyle(BlueRoundedButtonStyle(isDisabled: cameraViewModel.isBelowThreshold))
                 .sheet(isPresented: $isShowingObjectTextView) {
                     ObjectTextView(object: cameraViewModel.currentObject)
                         .presentationDetents([.fraction(0.3), .fraction(1)])
