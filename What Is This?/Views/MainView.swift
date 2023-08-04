@@ -30,9 +30,10 @@ struct MainView: View {
                 .disabled(cameraViewModel.isBelowThreshold)
                 .buttonStyle(BlueRoundedButtonStyle(isDisabled: cameraViewModel.isBelowThreshold))
                 .sheet(isPresented: $isShowingObjectTextView) {
-                    ObjectTextView(object: cameraViewModel.currentObject)
+                    ObjectView(cameraViewModel: cameraViewModel)
                         .presentationDetents([.fraction(0.3), .fraction(1)])
                         .presentationDragIndicator(.visible)
+                        .persistentSystemOverlays(.hidden)
                 }
                 .onChange(of: isShowingObjectTextView) { state in
                     if (state == false) {

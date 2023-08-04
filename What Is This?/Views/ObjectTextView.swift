@@ -26,8 +26,6 @@ struct ObjectTextView: View {
             Text(name)
                 .font(.largeTitle)
                 .bold()
-            
-            Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity)

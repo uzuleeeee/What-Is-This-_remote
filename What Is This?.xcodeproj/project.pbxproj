@@ -19,6 +19,10 @@
 		4AAE37DF2A78A12E005DBA47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAE37DE2A78A12E005DBA47 /* Preview Assets.xcassets */; };
 		4AAE37E62A78A21C005DBA47 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE37E52A78A21C005DBA47 /* CameraView.swift */; };
 		4AFBCD312A7CDAA7001D5348 /* LoopingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD302A7CDAA7001D5348 /* LoopingArray.swift */; };
+		4AFBCD352A7D1E9E001D5348 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD342A7D1E9E001D5348 /* ObjectView.swift */; };
+		4AFBCD382A7D20CB001D5348 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFBCD372A7D20CB001D5348 /* WebKit.framework */; };
+		4AFBCD3A2A7D20FE001D5348 /* GoogleSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD392A7D20FE001D5348 /* GoogleSearchView.swift */; };
+		4AFBCD3C2A7D2110001D5348 /* GoogleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD3B2A7D2110001D5348 /* GoogleWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		4AAE37DE2A78A12E005DBA47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AAE37E52A78A21C005DBA47 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		4AFBCD302A7CDAA7001D5348 /* LoopingArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingArray.swift; sourceTree = "<group>"; };
+		4AFBCD342A7D1E9E001D5348 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
+		4AFBCD372A7D20CB001D5348 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4AFBCD392A7D20FE001D5348 /* GoogleSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearchView.swift; sourceTree = "<group>"; };
+		4AFBCD3B2A7D2110001D5348 /* GoogleWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFBCD382A7D20CB001D5348 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,9 @@
 				4AAE37E52A78A21C005DBA47 /* CameraView.swift */,
 				4A10F89F2A793BA5006850D7 /* CameraPreview.swift */,
 				4A30E0922A7B43330053B597 /* ObjectTextView.swift */,
+				4AFBCD342A7D1E9E001D5348 /* ObjectView.swift */,
+				4AFBCD392A7D20FE001D5348 /* GoogleSearchView.swift */,
+				4AFBCD3B2A7D2110001D5348 /* GoogleWebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -82,6 +94,7 @@
 			children = (
 				4AAE37D62A78A12D005DBA47 /* What Is This? */,
 				4AAE37D52A78A12D005DBA47 /* Products */,
+				4AFBCD362A7D20CB001D5348 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +128,14 @@
 				4AAE37DE2A78A12E005DBA47 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4AFBCD362A7D20CB001D5348 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AFBCD372A7D20CB001D5348 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFBCD3C2A7D2110001D5348 /* GoogleWebView.swift in Sources */,
 				4A10F8A42A793C36006850D7 /* Resnet50.mlmodel in Sources */,
 				4A10F8A02A793BA5006850D7 /* CameraPreview.swift in Sources */,
 				4AAE37DA2A78A12D005DBA47 /* MainView.swift in Sources */,
+				4AFBCD3A2A7D20FE001D5348 /* GoogleSearchView.swift in Sources */,
 				4A3949DC2A7BA15C00752C49 /* ViewModifiers.swift in Sources */,
 				4AFBCD312A7CDAA7001D5348 /* LoopingArray.swift in Sources */,
+				4AFBCD352A7D1E9E001D5348 /* ObjectView.swift in Sources */,
 				4AAE37D82A78A12D005DBA47 /* What_Is_This_App.swift in Sources */,
 				4A10F8A62A7943D0006850D7 /* DetectedObject.swift in Sources */,
 				4AAE37E62A78A21C005DBA47 /* CameraView.swift in Sources */,
