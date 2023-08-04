@@ -18,6 +18,7 @@
 		4AAE37DC2A78A12E005DBA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAE37DB2A78A12E005DBA47 /* Assets.xcassets */; };
 		4AAE37DF2A78A12E005DBA47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAE37DE2A78A12E005DBA47 /* Preview Assets.xcassets */; };
 		4AAE37E62A78A21C005DBA47 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE37E52A78A21C005DBA47 /* CameraView.swift */; };
+		4AFBCD312A7CDAA7001D5348 /* LoopingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD302A7CDAA7001D5348 /* LoopingArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4AAE37DB2A78A12E005DBA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAE37DE2A78A12E005DBA47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AAE37E52A78A21C005DBA47 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		4AFBCD302A7CDAA7001D5348 /* LoopingArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				4A10F8A52A7943D0006850D7 /* DetectedObject.swift */,
+				4AFBCD302A7CDAA7001D5348 /* LoopingArray.swift */,
 			);
 			path = "Data Types";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				4A10F8A02A793BA5006850D7 /* CameraPreview.swift in Sources */,
 				4AAE37DA2A78A12D005DBA47 /* MainView.swift in Sources */,
 				4A3949DC2A7BA15C00752C49 /* ViewModifiers.swift in Sources */,
+				4AFBCD312A7CDAA7001D5348 /* LoopingArray.swift in Sources */,
 				4AAE37D82A78A12D005DBA47 /* What_Is_This_App.swift in Sources */,
 				4A10F8A62A7943D0006850D7 /* DetectedObject.swift in Sources */,
 				4AAE37E62A78A21C005DBA47 /* CameraView.swift in Sources */,
@@ -331,6 +335,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,6 +368,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

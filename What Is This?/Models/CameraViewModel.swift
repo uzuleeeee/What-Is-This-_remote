@@ -14,13 +14,13 @@ class CameraViewModel: NSObject, ObservableObject {
     var captureSession = AVCaptureSession()
     var requests = [VNRequest]()
     let resnetModel = Resnet50()
+    
+    var loopingArray = LoopingArray(length: 14)
     let threshold: Float = 0.1
     
     @Published var currentObject = DetectedObject(objectName: "Default", confidence: 0.0)
     
     func startSession() {
-        print("Start session")
-        
         guard let device = AVCaptureDevice.default(for: .video),
               let input = try? AVCaptureDeviceInput(device: device) else {
             return
@@ -44,16 +44,12 @@ class CameraViewModel: NSObject, ObservableObject {
     }
     
     func resumeSession() {
-        print("Resume session")
-        
         DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession.startRunning()
         }
     }
 
     func stopSession() {
-        print("Stop session")
-        
         captureSession.stopRunning()
     }
 
@@ -66,10 +62,10 @@ class CameraViewModel: NSObject, ObservableObject {
             if let results = request.results as? [VNClassificationObservation],
                let topResult = results.first {
                 // Process the object detection results here
-                print(topResult.identifier, topResult.confidence)
                 let newObject = DetectedObject(objectName: topResult.identifier, confidence: topResult.confidence)
+                self.loopingArray.add(newObject: newObject)
                 DispatchQueue.main.async { // Switch to the main thread
-                    self.currentObject = newObject
+                    self.currentObject = self.loopingArray.mostFrequentObject()
                 }
             }
         }

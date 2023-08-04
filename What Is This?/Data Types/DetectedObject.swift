@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct DetectedObject: Equatable {
+struct DetectedObject: Identifiable {
+    var id = UUID()
     let objectName: String
     let confidence: Float
     

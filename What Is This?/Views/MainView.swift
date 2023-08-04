@@ -35,9 +35,7 @@ struct MainView: View {
                         .presentationDragIndicator(.visible)
                 }
                 .onChange(of: isShowingObjectTextView) { state in
-                    print(state)
                     if (state == false) {
-                        print("State is false, start session")
                         cameraViewModel.resumeSession()
                     }
                 }
