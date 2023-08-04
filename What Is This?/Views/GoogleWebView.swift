@@ -18,8 +18,7 @@ struct GoogleWebView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        if let encodedSearchTerm = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-           let searchURL = URL(string: "https://www.google.com/search?q=\(encodedSearchTerm)&tbm=isch") {
+        if let encodedSearchTerm = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let searchURL = URL(string: "https://www.google.com/search?q=\(encodedSearchTerm)&tbm=isch") {
             let request = URLRequest(url: searchURL)
             uiView.load(request)
         }
