@@ -11,8 +11,9 @@ import SwiftUI
 struct What_Is_This_App: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            StartingView()
                 .persistentSystemOverlays(.hidden)
+                .preferredColorScheme(.dark)
         }
     }
 }

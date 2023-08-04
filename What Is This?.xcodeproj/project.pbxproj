@@ -23,6 +23,8 @@
 		4AFBCD382A7D20CB001D5348 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFBCD372A7D20CB001D5348 /* WebKit.framework */; };
 		4AFBCD3A2A7D20FE001D5348 /* GoogleSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD392A7D20FE001D5348 /* GoogleSearchView.swift */; };
 		4AFBCD3C2A7D2110001D5348 /* GoogleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD3B2A7D2110001D5348 /* GoogleWebView.swift */; };
+		4AFBCD3E2A7D33DA001D5348 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD3D2A7D33DA001D5348 /* LoadingView.swift */; };
+		4AFBCD402A7D3A80001D5348 /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD3F2A7D3A80001D5348 /* StartingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		4AFBCD372A7D20CB001D5348 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4AFBCD392A7D20FE001D5348 /* GoogleSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearchView.swift; sourceTree = "<group>"; };
 		4AFBCD3B2A7D2110001D5348 /* GoogleWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleWebView.swift; sourceTree = "<group>"; };
+		4AFBCD3D2A7D33DA001D5348 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4AFBCD3F2A7D3A80001D5348 /* StartingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 		4A3949DD2A7BA34400752C49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4AFBCD3F2A7D3A80001D5348 /* StartingView.swift */,
+				4AFBCD3D2A7D33DA001D5348 /* LoadingView.swift */,
 				4AAE37D92A78A12D005DBA47 /* MainView.swift */,
 				4AAE37E52A78A21C005DBA47 /* CameraView.swift */,
 				4A10F89F2A793BA5006850D7 /* CameraPreview.swift */,
@@ -213,9 +219,11 @@
 				4A10F8A02A793BA5006850D7 /* CameraPreview.swift in Sources */,
 				4AAE37DA2A78A12D005DBA47 /* MainView.swift in Sources */,
 				4AFBCD3A2A7D20FE001D5348 /* GoogleSearchView.swift in Sources */,
+				4AFBCD3E2A7D33DA001D5348 /* LoadingView.swift in Sources */,
 				4A3949DC2A7BA15C00752C49 /* ViewModifiers.swift in Sources */,
 				4AFBCD312A7CDAA7001D5348 /* LoopingArray.swift in Sources */,
 				4AFBCD352A7D1E9E001D5348 /* ObjectView.swift in Sources */,
+				4AFBCD402A7D3A80001D5348 /* StartingView.swift in Sources */,
 				4AAE37D82A78A12D005DBA47 /* What_Is_This_App.swift in Sources */,
 				4A10F8A62A7943D0006850D7 /* DetectedObject.swift in Sources */,
 				4AAE37E62A78A21C005DBA47 /* CameraView.swift in Sources */,
@@ -368,6 +376,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "thisCompany.What-Is-This-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,6 +412,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "thisCompany.What-Is-This-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
