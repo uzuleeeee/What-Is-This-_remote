@@ -14,26 +14,9 @@ struct BlueRoundedButtonStyle: ButtonStyle {
             .fontWeight(isDisabled ? .semibold : .bold)
             .font(.title)
             .padding()
+            .padding(.horizontal)
             .background(isDisabled ? .gray : .blue)
             .foregroundColor(.white)
-            .cornerRadius(25)
-    }
-}
-
-struct BlueRoundedButton: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .bold()
-            .font(.title)
-            .padding()
-            .background(.blue)
-            .foregroundColor(.white)
-            .cornerRadius(25)
-    }
-}
-
-extension View {
-    func blueRoundedButtonStyle() -> some View {
-        modifier(BlueRoundedButton())
+            .cornerRadius(50)
     }
 }
