@@ -18,6 +18,7 @@
 		4AAE37DC2A78A12E005DBA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAE37DB2A78A12E005DBA47 /* Assets.xcassets */; };
 		4AAE37DF2A78A12E005DBA47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAE37DE2A78A12E005DBA47 /* Preview Assets.xcassets */; };
 		4AAE37E62A78A21C005DBA47 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE37E52A78A21C005DBA47 /* CameraView.swift */; };
+		4ACC8A632A7DF6CA00A7AD6F /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC8A622A7DF6CA00A7AD6F /* Speaker.swift */; };
 		4AFBCD312A7CDAA7001D5348 /* LoopingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD302A7CDAA7001D5348 /* LoopingArray.swift */; };
 		4AFBCD352A7D1E9E001D5348 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFBCD342A7D1E9E001D5348 /* ObjectView.swift */; };
 		4AFBCD382A7D20CB001D5348 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFBCD372A7D20CB001D5348 /* WebKit.framework */; };
@@ -41,6 +42,7 @@
 		4AAE37DB2A78A12E005DBA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAE37DE2A78A12E005DBA47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AAE37E52A78A21C005DBA47 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		4ACC8A622A7DF6CA00A7AD6F /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		4AFBCD302A7CDAA7001D5348 /* LoopingArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingArray.swift; sourceTree = "<group>"; };
 		4AFBCD342A7D1E9E001D5348 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 		4AFBCD372A7D20CB001D5348 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4A10F8A12A793BBC006850D7 /* CameraViewModel.swift */,
+				4ACC8A622A7DF6CA00A7AD6F /* Speaker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				4AFBCD3C2A7D2110001D5348 /* GoogleWebView.swift in Sources */,
 				4A10F8A42A793C36006850D7 /* Resnet50.mlmodel in Sources */,
 				4A10F8A02A793BA5006850D7 /* CameraPreview.swift in Sources */,
+				4ACC8A632A7DF6CA00A7AD6F /* Speaker.swift in Sources */,
 				4AAE37DA2A78A12D005DBA47 /* MainView.swift in Sources */,
 				4AFBCD3A2A7D20FE001D5348 /* GoogleSearchView.swift in Sources */,
 				4AFBCD3E2A7D33DA001D5348 /* LoadingView.swift in Sources */,

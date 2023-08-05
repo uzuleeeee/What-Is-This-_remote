@@ -21,4 +21,8 @@ struct DetectedObject: Identifiable {
         let confidencePercentage = confidence * 100
         return String(format: "%0.0f", confidencePercentage) + "%"
     }
+    
+    var fullText: String {
+        return "I am \(roundedConfidencePercentage) sure this is a \(firstObjectName)"
+    }
 }

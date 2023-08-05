@@ -11,6 +11,8 @@ import Network
 struct ObjectView: View {
     @ObservedObject var cameraViewModel : CameraViewModel
     @State private var isOnline = true
+
+    let speaker = Speaker()
     
     var body: some View {
         VStack {
@@ -22,6 +24,7 @@ struct ObjectView: View {
         }
         .onAppear {
             checkInternetConnection()
+            speaker.Say(text: cameraViewModel.currentObject.fullText)
         }
     }
     
