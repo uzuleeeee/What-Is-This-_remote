@@ -17,7 +17,8 @@ struct LoadingView: View {
                 .font(.largeTitle)
                 .fontWeight(.heavy)
              */
-            Image("Icon")
+            Image(decorative: "Icon")
+                .accessibilityHidden(true)
             
             Spacer()
             Spacer()

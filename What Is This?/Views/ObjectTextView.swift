@@ -30,6 +30,8 @@ struct ObjectTextView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(.background)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("I am \(roundedConfidencePercentage) sure this is a \(name)")
     }
 }
 

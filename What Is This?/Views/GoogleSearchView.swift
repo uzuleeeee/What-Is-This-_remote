@@ -24,6 +24,8 @@ struct GoogleSearchView: View {
                     Text("No internet connection.")
                 }
                 .padding()
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("No internet connection.")
             }
         }
     }
