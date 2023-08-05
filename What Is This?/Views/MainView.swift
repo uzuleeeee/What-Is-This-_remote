@@ -10,6 +10,7 @@ import AVFoundation
 
 struct MainView: View {
     @StateObject var cameraViewModel = CameraViewModel()
+    @StateObject var listener = Listener()
     
     @State private var isShowingObjectTextView = false
     
@@ -22,10 +23,7 @@ struct MainView: View {
                 Spacer()
                 
                 Button ("What is this?") {
-                    isShowingObjectTextView.toggle()
-                    if (isShowingObjectTextView) {
-                        cameraViewModel.stopSession()
-                    }
+                    ShowWhatIsThis()
                 }
                 .disabled(cameraViewModel.isBelowThreshold)
                 .buttonStyle(BlueRoundedButtonStyle(isDisabled: cameraViewModel.isBelowThreshold))
@@ -38,9 +36,25 @@ struct MainView: View {
                 .onChange(of: isShowingObjectTextView) { state in
                     if (state == false) {
                         cameraViewModel.resumeSession()
+                        listener.resetDetected()
                     }
                 }
             }
+        }
+        .onAppear {
+            listener.requestMicrophonePermission()
+        }
+        .onChange(of: listener.detected) { detected in
+            if detected && !cameraViewModel.isBelowThreshold {
+                ShowWhatIsThis()
+            }
+        }
+    }
+    
+    func ShowWhatIsThis() {
+        isShowingObjectTextView.toggle()
+        if (isShowingObjectTextView) {
+            cameraViewModel.stopSession()
         }
     }
 }
