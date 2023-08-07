@@ -367,7 +367,7 @@
 				INFOPLIST_FILE = "What-Is-This--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "What Is This?";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires a camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera for image recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,7 +404,7 @@
 				INFOPLIST_FILE = "What-Is-This--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "What Is This?";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires a camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera for image recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
