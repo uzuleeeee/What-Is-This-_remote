@@ -18,12 +18,6 @@ struct CameraView: View {
         CameraPreview(camera: cameraViewModel)
             .ignoresSafeArea()
             .cornerRadius(25)
-            .onAppear {
-                cameraViewModel.startSession()
-            }
-            .onDisappear {
-                cameraViewModel.stopSession()
-            }
     }
 }
 

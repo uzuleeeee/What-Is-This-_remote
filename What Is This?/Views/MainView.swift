@@ -42,6 +42,25 @@ struct MainView: View {
                 }
             }
         }
+        .alert(isPresented: $cameraViewModel.alert) {
+            Alert(
+                title: Text("Camera Access Denied"),
+                message: Text("Please enable camera access in Settings to use this feature."),
+                primaryButton: .destructive(Text("Dismiss")),
+                secondaryButton: .default(Text("Open Settings"), action: {
+                    cameraViewModel.openSettings()
+                })
+            )
+        }
+        .onAppear {
+            cameraViewModel.checkAuthorization()
+            NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { _ in
+                // This closure will be called when the app is about to enter the foreground.
+                // You can put your code here to handle the event.
+                print("App is returning to foreground")
+                cameraViewModel.checkAuthorization()
+            }
+        }
     }
 }
 

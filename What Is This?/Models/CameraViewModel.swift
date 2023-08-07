@@ -19,6 +19,7 @@ class CameraViewModel: NSObject, ObservableObject {
     let threshold: Float = 0.1
     
     @Published var currentObject = DetectedObject(objectName: "Default", confidence: 0.0)
+    @Published var alert = false
     
     func startSession() {
         guard let device = AVCaptureDevice.default(for: .video),
@@ -51,6 +52,49 @@ class CameraViewModel: NSObject, ObservableObject {
 
     func stopSession() {
         captureSession.stopRunning()
+    }
+    
+    func checkAuthorization() {
+        print("Check auth")
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .notDetermined:
+            print("not det")
+            AVCaptureDevice.requestAccess(for: .video) { status in
+                if (status == true) {
+                    self.startSession()
+                    return
+                }
+            }
+        case .restricted:
+            print("res")
+            AVCaptureDevice.requestAccess(for: .video) { status in
+                if (status == true) {
+                    self.startSession()
+                    return
+                }
+            }
+        case .denied:
+            print("den")
+            print("before", alert)
+            self.alert = true
+            print("after", alert)
+            return
+        case .authorized:
+            print("auth")
+            self.startSession()
+            return
+        @unknown default:
+            return
+        }
+    }
+    
+    func openSettings() {
+        self.alert = false
+        
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
     }
 
     private func setupObjectDetection() {
