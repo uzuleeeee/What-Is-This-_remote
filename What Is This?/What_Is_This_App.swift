@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 @main
 struct What_Is_This_App: App {
+    init () {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
+    
     var body: some Scene {
         WindowGroup {
             StartingView()

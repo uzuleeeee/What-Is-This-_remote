@@ -19,6 +19,8 @@ struct MainView: View {
                 .edgesIgnoringSafeArea(.bottom)
             
             VStack {
+                BannerAdView(adUnitID: "ca-app-pub-3940256099942544/2934735716") // Replace with real ID
+                
                 Spacer()
                 
                 Button ("What is this?") {
