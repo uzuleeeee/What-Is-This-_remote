@@ -80,6 +80,7 @@
 				4AFBCD342A7D1E9E001D5348 /* ObjectView.swift */,
 				4AFBCD392A7D20FE001D5348 /* GoogleSearchView.swift */,
 				4AFBCD3B2A7D2110001D5348 /* GoogleWebView.swift */,
+				4AA076302A80F17F00530AA2 /* BannerAdView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,7 +125,6 @@
 			children = (
 				4A45D40D2A78BDC0002EB7AB /* What-Is-This--Info.plist */,
 				4AAE37D72A78A12D005DBA47 /* What_Is_This_App.swift */,
-				4AA076302A80F17F00530AA2 /* BannerAdView.swift */,
 				4A3949DD2A7BA34400752C49 /* Views */,
 				4A3949DE2A7BA35D00752C49 /* Models */,
 				4A3949DF2A7BA37300752C49 /* Data Types */,
