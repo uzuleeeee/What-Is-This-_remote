@@ -27,7 +27,6 @@ struct ObjectTextView: View {
                 .font(.largeTitle)
                 .bold()
         }
-        .padding()
         .frame(maxWidth: .infinity)
         .background(.background)
         .accessibilityElement(children: .ignore)

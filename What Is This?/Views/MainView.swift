@@ -19,6 +19,11 @@ struct MainView: View {
                 .edgesIgnoringSafeArea(.bottom)
             
             VStack {
+                // Test ID ca-app-pub-3940256099942544/2934735716
+                // Real ID ca-app-pub-6936495722226334/4311660079
+                BannerAdView(adUnitID: "ca-app-pub-6936495722226334/4311660079")
+                    .frame(width: .infinity, height: UIScreen.main.bounds.height / 15)
+                
                 Spacer()
                 
                 Button ("What is this?") {
@@ -31,7 +36,7 @@ struct MainView: View {
                 .buttonStyle(BlueRoundedButtonStyle(isDisabled: cameraViewModel.isBelowThreshold))
                 .sheet(isPresented: $isShowingObjectTextView) {
                     ObjectView(cameraViewModel: cameraViewModel)
-                        .presentationDetents([.fraction(0.3), .fraction(1)])
+                        .presentationDetents([.fraction(0.4), .fraction(1)])
                         .presentationDragIndicator(.visible)
                         .persistentSystemOverlays(.hidden)
                 }
