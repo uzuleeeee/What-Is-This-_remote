@@ -10,6 +10,9 @@ import GoogleMobileAds
 
 struct BannerAdView: UIViewRepresentable {
     var adUnitID: String
+    var isTest: Bool = false
+    
+    let testAdUnitID = "ca-app-pub-3940256099942544/2934735716"
     
     func makeCoordinator() -> Coordinator {
         return Coordinator()
@@ -18,7 +21,11 @@ struct BannerAdView: UIViewRepresentable {
     func makeUIView(context: Context) -> GADBannerView {
         let adView = GADBannerView()
         
-        adView.adUnitID = adUnitID
+        if (isTest) {
+            adView.adUnitID = testAdUnitID
+        } else {
+            adView.adUnitID = adUnitID
+        }
         adView.rootViewController = UIApplication.shared.getRootViewController()
         adView.delegate = context.coordinator
         adView.load(GADRequest())

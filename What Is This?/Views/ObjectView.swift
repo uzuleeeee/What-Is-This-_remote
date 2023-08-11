@@ -20,7 +20,7 @@ struct ObjectView: View {
                 .padding()
             // Test ID ca-app-pub-3940256099942544/2934735716
             // Read ID ca-app-pub-6936495722226334/7053265686
-            BannerAdView(adUnitID: "ca-app-pub-6936495722226334/7053265686")
+            BannerAdView(adUnitID: "ca-app-pub-6936495722226334/7053265686", isTest: true)
                 .frame(width: .infinity, height: UIScreen.main.bounds.height / 15)
             GoogleSearchView(term: cameraViewModel.currentObject.firstObjectName, isOnline: $isOnline)
             

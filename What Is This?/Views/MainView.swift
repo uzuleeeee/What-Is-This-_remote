@@ -21,7 +21,7 @@ struct MainView: View {
             VStack {
                 // Test ID ca-app-pub-3940256099942544/2934735716
                 // Real ID ca-app-pub-6936495722226334/4311660079
-                BannerAdView(adUnitID: "ca-app-pub-6936495722226334/4311660079")
+                BannerAdView(adUnitID: "ca-app-pub-6936495722226334/4311660079", isTest: true)
                     .frame(width: .infinity, height: UIScreen.main.bounds.height / 15)
                 
                 Spacer()
