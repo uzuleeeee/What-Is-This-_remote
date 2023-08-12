@@ -14,6 +14,7 @@ class CameraViewModel: NSObject, ObservableObject {
     var captureSession = AVCaptureSession()
     var requests = [VNRequest]()
     let resnetModel = Resnet50()
+    private var currentImage: UIImage?
     
     var loopingArray = LoopingArray(length: 14)
     let threshold: Float = 0.1
@@ -95,6 +96,41 @@ class CameraViewModel: NSObject, ObservableObject {
             return
         }
         UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+    }
+    
+    func analyzeImage(_ image: UIImage) {
+        guard let model = try? VNCoreMLModel(for: resnetModel.model) else {
+            return
+        }
+
+        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
+            self?.processObservations(for: request, error: error)
+        }
+
+        guard let ciImage = CIImage(image: image) else {
+            return
+        }
+
+        let handler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        do {
+            try handler.perform([request])
+        } catch {
+            print("Failed to perform Vision request: \(error.localizedDescription)")
+        }
+    }
+
+    private func processObservations(for request: VNRequest, error: Error?) {
+        guard let results = request.results as? [VNClassificationObservation],
+              let topResult = results.first else {
+            print("Unable to classify image: \(error?.localizedDescription ?? "Error")")
+            return
+        }
+
+        print("Detected object: \(topResult.identifier), Confidence: \(topResult.confidence)")
+        let newObject = DetectedObject(objectName: topResult.identifier, confidence: topResult.confidence)
+        DispatchQueue.main.async { // Switch to the main thread
+            self.currentObject = newObject
+        }
     }
 
     private func setupObjectDetection() {

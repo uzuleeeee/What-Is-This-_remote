@@ -7,16 +7,31 @@
 
 import SwiftUI
 import AVFoundation
+import PhotosUI
 
 struct MainView: View {
     @StateObject var cameraViewModel = CameraViewModel()
     
     @State private var isShowingObjectTextView = false
+    @State var selectedItems: [PhotosPickerItem] = []
+    @State var data: Data?
     
     var body: some View {
         ZStack {
             CameraView(cameraViewModel: cameraViewModel)
                 .edgesIgnoringSafeArea(.bottom)
+            
+            if isShowingObjectTextView {
+                if let data = data, let uiimage = UIImage (data: data) {
+                    ZStack {
+                        Color(.black)
+                            .ignoresSafeArea()
+                        Image (uiImage: uiimage)
+                            .resizable()
+                            .scaledToFit()
+                    }
+                }
+            }
             
             VStack {
                 // Test ID ca-app-pub-3940256099942544/2934735716
@@ -43,6 +58,38 @@ struct MainView: View {
                 .onChange(of: isShowingObjectTextView) { state in
                     if (state == false) {
                         cameraViewModel.resumeSession()
+                        data = nil
+                    }
+                }
+                
+                PhotosPicker(
+                    selection: $selectedItems,
+                    maxSelectionCount: 1,
+                    matching: .images
+                ) {
+                    Text("Choose from Photos")
+                        .padding()
+                        .background(.white)
+                        .bold()
+                        .cornerRadius(50)
+                }
+                .padding(.top)
+                .onChange (of: selectedItems) { newValue in
+                    guard let item = selectedItems.first else { return }
+                    item.loadTransferable (type: Data.self) { result in
+                        switch result {
+                        case .success (let data):
+                            if let data = data {
+                                cameraViewModel.stopSession()
+                                self.data = data
+                                cameraViewModel.analyzeImage(UIImage(data: data)!)
+                                isShowingObjectTextView = true
+                            } else {
+                                print ("Data is nil")
+                            }
+                        case .failure(let failure):
+                            fatalError(failure.localizedDescription)
+                        }
                     }
                 }
             }
