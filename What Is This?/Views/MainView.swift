@@ -16,6 +16,8 @@ struct MainView: View {
     @State var selectedItems: [PhotosPickerItem] = []
     @State var data: Data?
     
+    var interstitial = Interstitial()
+    
     var body: some View {
         ZStack {
             CameraView(cameraViewModel: cameraViewModel)
@@ -41,6 +43,10 @@ struct MainView: View {
                 
                 Spacer()
                 
+                Button ("Show ad") {
+                    //interstitial.showAd()
+                }
+                
                 Button ("What is this?") {
                     isShowingObjectTextView.toggle()
                     if (isShowingObjectTextView) {
@@ -49,7 +55,9 @@ struct MainView: View {
                 }
                 .disabled(cameraViewModel.isBelowThreshold)
                 .buttonStyle(BlueRoundedButtonStyle(isDisabled: cameraViewModel.isBelowThreshold))
-                .sheet(isPresented: $isShowingObjectTextView) {
+                .sheet(isPresented: $isShowingObjectTextView, onDismiss: {
+                    interstitial.showAd()
+                }) {
                     ObjectView(cameraViewModel: cameraViewModel)
                         .presentationDetents([.fraction(0.4), .fraction(1)])
                         .presentationDragIndicator(.visible)

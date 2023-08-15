@@ -11,6 +11,7 @@
 		4A10F8A22A793BBC006850D7 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10F8A12A793BBC006850D7 /* CameraViewModel.swift */; };
 		4A10F8A42A793C36006850D7 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4A10F8A32A793C36006850D7 /* Resnet50.mlmodel */; };
 		4A10F8A62A7943D0006850D7 /* DetectedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10F8A52A7943D0006850D7 /* DetectedObject.swift */; };
+		4A1CA1F92A873E0700428265 /* Interstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1CA1F82A873E0700428265 /* Interstitial.swift */; };
 		4A30E0932A7B43330053B597 /* ObjectTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30E0922A7B43330053B597 /* ObjectTextView.swift */; };
 		4A3949DC2A7BA15C00752C49 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3949DB2A7BA15C00752C49 /* ViewModifiers.swift */; };
 		4A7E9F5B2A85D7C60077C783 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 4A7E9F5A2A85D7C60077C783 /* GoogleMobileAds */; };
@@ -35,6 +36,7 @@
 		4A10F8A12A793BBC006850D7 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		4A10F8A32A793C36006850D7 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		4A10F8A52A7943D0006850D7 /* DetectedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObject.swift; sourceTree = "<group>"; };
+		4A1CA1F82A873E0700428265 /* Interstitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interstitial.swift; sourceTree = "<group>"; };
 		4A30E0922A7B43330053B597 /* ObjectTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTextView.swift; sourceTree = "<group>"; };
 		4A3949DB2A7BA15C00752C49 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		4A45D40D2A78BDC0002EB7AB /* What-Is-This--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "What-Is-This--Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -88,6 +90,7 @@
 		4A3949DE2A7BA35D00752C49 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4A1CA1F82A873E0700428265 /* Interstitial.swift */,
 				4A10F8A12A793BBC006850D7 /* CameraViewModel.swift */,
 				4ACC8A622A7DF6CA00A7AD6F /* Speaker.swift */,
 			);
@@ -239,6 +242,7 @@
 				4A3949DC2A7BA15C00752C49 /* ViewModifiers.swift in Sources */,
 				4AFBCD312A7CDAA7001D5348 /* LoopingArray.swift in Sources */,
 				4AFBCD352A7D1E9E001D5348 /* ObjectView.swift in Sources */,
+				4A1CA1F92A873E0700428265 /* Interstitial.swift in Sources */,
 				4AFBCD402A7D3A80001D5348 /* StartingView.swift in Sources */,
 				4AAE37D82A78A12D005DBA47 /* What_Is_This_App.swift in Sources */,
 				4A10F8A62A7943D0006850D7 /* DetectedObject.swift in Sources */,
